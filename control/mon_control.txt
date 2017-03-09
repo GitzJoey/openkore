@@ -57,11 +57,12 @@
 # Monsters not found in this file, or flags not specified will default to:
 # <attack> = 1
 
+Martin 0 0 0
 
 ##### Eggs #####
 Ant's Egg 0 0 0
 PecoPeco's Egg 0 0 0
-Pupa 0 0 0
+Pupa 2 0 0
 Thief Bug's Egg 0 0 0
 
 ##### Alchemist Summons ####
