@@ -8,7 +8,7 @@ server 0
 username 
 password 
 loginPinCode
-char 1
+char 0
 
 # Poseidon Settings (http://wiki.openkore.com/index.php/PoseidonServer)
 # They must be the same as Query Server config in Poseidon.txt
@@ -36,7 +36,7 @@ XKore_ID
 
 # It is not advised to set secureAdminPassword if you're using Xkore 2
 secureAdminPassword 1
-adminPassword weakegat
+adminPassword trerejob
 callSign
 commandPrefix ;
 callSignGM 0
@@ -184,7 +184,7 @@ cartMaxWeight 7900
 itemsTakeAuto_new 0
 itemsTakeGreed 0
 
-lockMap gef_fild00
+lockMap pay_fild03
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -236,8 +236,8 @@ statsAddAuto_list
 statsAddAuto_dontUseBonus 0
 statsAdd_over_99 0
 
-skillsAddAuto 0
-skillsAddAuto_list
+skillsAddAuto 1
+skillsAddAuto_list NV_BASIC 9
 
 tankMode 0
 tankModeTarget
