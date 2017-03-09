@@ -36,7 +36,7 @@ XKore_ID
 
 # It is not advised to set secureAdminPassword if you're using Xkore 2
 secureAdminPassword 1
-adminPassword peanugru
+adminPassword weakegat
 callSign
 commandPrefix ;
 callSignGM 0
@@ -146,11 +146,11 @@ clientSight 20
 
 dcPause 1
 dcOnDeath 0
-dcOnDualLogin 0
-dcOnDisconnect 0
+dcOnDualLogin 1
+dcOnDisconnect 1
 dcOnEmptyArrow 0
 dcOnMaxReconnections 0
-dcOnMute 0
+dcOnMute 1
 dcOnPM 0
 dcOnZeny 0
 dcOnStorageFull 1
@@ -184,7 +184,7 @@ cartMaxWeight 7900
 itemsTakeAuto_new 0
 itemsTakeGreed 0
 
-lockMap gef_fild07
+lockMap gef_fild00
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -677,7 +677,7 @@ useSelf_item {
 	inLockOnly 0
 	notWhileSitting 0
 	notInTown 0
-	timeout
+	timeout 0
 	disabled 0
 	inInventory
 	manualAI 0
@@ -696,7 +696,7 @@ buyAuto {
 }
 
 sellAuto 1
-sellAuto_npc
+sellAuto_npc geffen_in 22 171
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s e
