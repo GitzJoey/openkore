@@ -57,13 +57,17 @@
 # Monsters not found in this file, or flags not specified will default to:
 # <attack> = 1
 
+##### Novice Beware #####
 Martin 0 0 0
+Creamy 0 0 0
+Rocker 0 0 0
+Andre 0 0 0
 
 ##### Eggs #####
-Ant's Egg 0 0 0
-PecoPeco's Egg 0 0 0
+Ant's Egg 2 0 0
+PecoPeco's Egg 2 0 0
 Pupa 2 0 0
-Thief Bug's Egg 0 0 0
+Thief Bug's Egg 2 0 0
 
 ##### Alchemist Summons ####
 # Summoned Parasite
@@ -82,14 +86,14 @@ Thief Bug's Egg 0 0 0
 1590 0 0 0 
 
 ##### Plants #####
-Black Mushroom 0 0 0
-Blue Plant 0 0 0
-Green Plant 0 0 0
-Red Mushroom 0 0 0
-Red Plant 0 0 0
-Shining Plant 0 0 0
-White Plant 0 0 0
-Yellow Plant 0 0 0
+Black Mushroom 2 0 0
+Blue Plant 2 0 0
+Green Plant 2 0 0
+Red Mushroom 2 0 0
+Red Plant 2 0 0
+Shining Plant 2 0 0
+White Plant 2 0 0
+Yellow Plant 2 0 0
 
 
 ##### Homunculus #####

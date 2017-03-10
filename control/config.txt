@@ -696,7 +696,16 @@ buyAuto {
 }
 
 sellAuto 1
-sellAuto_npc geffen_in 22 171
+#Geffen
+#sellAuto_npc geffen_in 22 171
+#Morocc
+#sellAuto_npc morocc 245 137
+#Izlude
+#sellAuto_npc izlude_in 60 127
+#Prontera
+#sellAuto_npc 
+#Alberta
+#sellAuto_npc alberta_in 175 97
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s e
