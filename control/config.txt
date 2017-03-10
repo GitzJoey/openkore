@@ -702,8 +702,8 @@ sellAuto 1
 #sellAuto_npc morocc 245 137
 #Izlude
 #sellAuto_npc izlude_in 60 127
-#Prontera
-#sellAuto_npc 
+#Payon
+#sellAuto_npc payon 138 158
 #Alberta
 #sellAuto_npc alberta_in 175 97
 sellAuto_standpoint
