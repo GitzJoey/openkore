@@ -36,7 +36,7 @@ XKore_ID
 
 # It is not advised to set secureAdminPassword if you're using Xkore 2
 secureAdminPassword 1
-adminPassword trerejob
+adminPassword stumamai
 callSign
 commandPrefix ;
 callSignGM 0
@@ -184,7 +184,7 @@ cartMaxWeight 7900
 itemsTakeAuto_new 0
 itemsTakeGreed 0
 
-lockMap pay_fild03
+lockMap moc_fild01
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -298,7 +298,7 @@ wx_map_monsterSticking 1
 wx_map_npcSticking 1
 wx_map_playersSticking 1
 wx_map_portalSticking 5
-wx_map_route
+wx_map_route 1
 wx_npcTalk
 wx_captcha
 showAllDamage 0
@@ -706,6 +706,8 @@ sellAuto 1
 #sellAuto_npc payon 138 158
 #Alberta
 #sellAuto_npc alberta_in 175 97
+#prontera
+sellAuto_npc prontera 104 49
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s e

@@ -220,11 +220,11 @@ sub parse {
 	if($lastSwitch eq "006A") {
 		warning "rebuilding packet here..\n","packetParser",0;
 					
-		my $sniff = "00000000  69 00 4F 00 25 10 00 00  C9 D3 01 00 00 00 00 00   i.O.%... ........ 
-00000010  F6 84 8E 0C 00 00 00 00  00 00 00 00 00 00 00 00   ........ ........ 
+		my $sniff = "00000000  69 00 4F 00 B4 59 00 00  C9 D3 01 00 00 00 00 00   i.O..Y.. ........ 
+00000010  10 E1 A9 0C 00 00 00 00  00 00 00 00 00 00 00 00   ........ ........ 
 00000020  00 00 00 00 00 00 00 00  00 00 00 00 00 00 01 CA   ........ ........ 
 00000030  5D 19 46 70 17 43 48 41  4F 53 00 00 00 00 00 00   ].Fp.CHA OS...... 
-00000040  00 00 00 00 00 00 00 00  00 42 2E 00 00 00 00      ........ .B.....";
+00000040  00 00 00 00 00 00 00 00  00 60 2D 00 00 00 00      ........ .`-....";
 
 		my $line1a = substr $sniff, 10, 23;
 		my @hexline1a = split(' ', $line1a);
@@ -284,10 +284,13 @@ sub parse {
 	
 	unless ($handler) {
 		warning "Packet Parser : Unknown switch: $lastSwitch\n";		
-		#return undef;
-		$self->{packet_list}{$lastSwitch} = ['secure_login_key', 'x2 a*', [qw(secure_key)] ];
 		
-		$handler = $self->{packet_list}{$lastSwitch};
+		if ($net && $net->getState == Network::NOT_CONNECTED) {
+			$self->{packet_list}{$lastSwitch} = ['secure_login_key', 'x2 a*', [qw(secure_key)] ];		
+			$handler = $self->{packet_list}{$lastSwitch};
+		} else {
+			return undef;
+		}
 	}
 
 	# $handler->[0] may be (re)binded to $switch here for current serverType

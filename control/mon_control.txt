@@ -58,16 +58,16 @@
 # <attack> = 1
 
 ##### Novice Beware #####
-Martin 0 0 0
-Creamy 0 0 0
-Rocker 0 0 0
-Andre 0 0 0
+#Martin 2 0 0
+#Creamy 2 0 0
+#Rocker 2 0 0
+#Andre 2 0 0
 
 ##### Eggs #####
-Ant's Egg 2 0 0
-PecoPeco's Egg 2 0 0
-Pupa 2 0 0
-Thief Bug's Egg 2 0 0
+Ant's Egg 0 0 0
+PecoPeco's Egg 0 0 0
+Pupa 0 0 0
+Thief Bug's Egg 0 0 0
 
 ##### Alchemist Summons ####
 # Summoned Parasite
