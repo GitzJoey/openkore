@@ -122,13 +122,18 @@ sub readNext {
 	
 	my $result;
 	
-	Log::warning sprintf("Packet before mod %s %d %d \n", $switch, $rpackets->{$switch}{length}, $size);
+	#Log::warning sprintf("Packet before mod %s %d %d \n", $switch, $rpackets->{$switch}{length}, $size);
 	
 	if ($rpackets->{$switch}{length} == 0) {
-		#$rpackets->{$switch} = (length => 20, function => '', minLength => 20, repeat => 0);
-		#$size = $rpackets->{$switch}{length};
 	
-		Log::warning sprintf("Packet after mod %s %d %d \n", $switch, $rpackets->{$switch}{length}, $size);
+		$rpackets->{$switch}{length} = 20;
+		$rpackets->{$switch}{function} = undef;
+		$rpackets->{$switch}{minLength} = 20;
+		$rpackets->{$switch}{repeat} = 0;
+		
+		$size = $rpackets->{$switch}{length};
+	
+		#Log::warning sprintf("Packet after mod %s %d %d \n", $switch, $rpackets->{$switch}{length}, $size);
 	}
 	
 	my $nextMessageMightBeAccountID = $self->{nextMessageMightBeAccountID};
