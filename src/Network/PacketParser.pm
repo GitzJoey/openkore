@@ -286,6 +286,7 @@ sub parse {
 		warning "Packet Parser : Unknown switch: $lastSwitch\n";		
 		
 		if ($net && $net->getState == Network::NOT_CONNECTED) {
+			warning "Packet Parser : Unknown switch: $lastSwitch converted to secure_login_key\n";		
 			$self->{packet_list}{$lastSwitch} = ['secure_login_key', 'x2 a*', [qw(secure_key)] ];		
 			$handler = $self->{packet_list}{$lastSwitch};
 		} else {
