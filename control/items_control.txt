@@ -40,6 +40,8 @@
 # All items not mentioned in this file will be automatically stored in storage.
 all 0 1 0
 
+# Sell This !
+Green Herb 0 0 1
 
 ##### HEAL/SUPPORT ITEMS #####
 # Adjust these to your needs

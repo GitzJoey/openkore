@@ -7,7 +7,7 @@
 master 12
 gamelogin 12
 charlogin 12
-maplogin 12
+maplogin 24
 play 40
 # When disconnected, wait x seconds before reconnecting again
 reconnect 60
