@@ -217,68 +217,40 @@ sub parse {
 
 	$lastSwitch = Network::MessageTokenizer::getMessageID($msg);
 	
-	if($lastSwitch eq "006A") {
-		warning "rebuilding packet here..\n","packetParser",0;
-					
-		my $sniff = "00000000  69 00 4F 00 B4 59 00 00  C9 D3 01 00 00 00 00 00   i.O..Y.. ........ 
-00000010  10 E1 A9 0C 00 00 00 00  00 00 00 00 00 00 00 00   ........ ........ 
-00000020  00 00 00 00 00 00 00 00  00 00 00 00 00 00 01 CA   ........ ........ 
-00000030  5D 19 46 70 17 43 48 41  4F 53 00 00 00 00 00 00   ].Fp.CHA OS...... 
-00000040  00 00 00 00 00 00 00 00  00 60 2D 00 00 00 00      ........ .`-....";
+    if($lastSwitch eq "006A") {
+		warning "rebuilding packet here in parse ..\n", "packetParser" ,0;
 
-		my $line1a = substr $sniff, 10, 23;
-		my @hexline1a = split(' ', $line1a);
-		my $line1b = substr $sniff, 35, 23;
-		my @hexline1b = split(' ', $line1b);
+		my $hex = "0000: 65 00 3F 00 03 00 31 68 00 00 00 00 00 00 00 00 01       e.?...1h.........";
 		
-		my $line2a = substr $sniff, 90, 23;
-		my @hexline2a = split(' ', $line2a);
-		my $line2b = substr $sniff, 115, 23;
-		my @hexline2b = split(' ', $line2b);
+		my $hexXX0 = substr $hex, 12, 2;
+		my $hexXX1 = substr $hex, 15, 2;
+		my $hexXX2 = substr $hex, 18, 2;
 		
-		my $line3a = substr $sniff, 170, 23;
-		my @hexline3a = split(' ', $line3a);
-		my $line3b = substr $sniff, 195, 23;
-		my @hexline3b = split(' ', $line3b);
+		my $hexYY0 = substr $hex, 24, 2;
+		my $hexYY1 = substr $hex, 27, 2;
 		
-		my $line4a = substr $sniff, 250, 23;
-		my @hexline4a = split(' ', $line4a);
-		my $line4b = substr $sniff, 275, 23;
-		my @hexline4b = split(' ', $line4b);
-		
-		my $line5a = substr $sniff, 330, 23;
-		my @hexline5a = split(' ', $line5a);
-		my $line5b = substr $sniff, 355, 20;
-		my @hexline5b = split(' ', $line5b);
-		
-		#warning @hexline1a->[0]." ".@hexline1a->[1]." ".@hexline1a->[2]." ".@hexline1a->[3]." ".@hexline1a->[4]." ".@hexline1a->[5]." ".@hexline1a->[6]." ".@hexline1a->[7]."  ","packetParser",0;
-		#warning @hexline1b->[0]." ".@hexline1b->[1]." ".@hexline1b->[2]." ".@hexline1b->[3]." ".@hexline1b->[4]." ".@hexline1b->[5]." ".@hexline1b->[6]." ".@hexline1b->[7]."\n","packetParser",0;
-		#warning @hexline2a->[0]." ".@hexline2a->[1]." ".@hexline2a->[2]." ".@hexline2a->[3]." ".@hexline2a->[4]." ".@hexline2a->[5]." ".@hexline2a->[6]." ".@hexline2a->[7]."  ","packetParser",0;
-		#warning @hexline2b->[0]." ".@hexline2b->[1]." ".@hexline2b->[2]." ".@hexline2b->[3]." ".@hexline2b->[4]." ".@hexline2b->[5]." ".@hexline2b->[6]." ".@hexline2b->[7]."\n","packetParser",0;
-		#warning @hexline3a->[0]." ".@hexline3a->[1]." ".@hexline3a->[2]." ".@hexline3a->[3]." ".@hexline3a->[4]." ".@hexline3a->[5]." ".@hexline3a->[6]." ".@hexline3a->[7]."  ","packetParser",0;
-		#warning @hexline3b->[0]." ".@hexline3b->[1]." ".@hexline3b->[2]." ".@hexline3b->[3]." ".@hexline3b->[4]." ".@hexline3b->[5]." ".@hexline3b->[6]." ".@hexline3b->[7]."\n","packetParser",0;
-		#warning @hexline4a->[0]." ".@hexline4a->[1]." ".@hexline4a->[2]." ".@hexline4a->[3]." ".@hexline4a->[4]." ".@hexline4a->[5]." ".@hexline4a->[6]." ".@hexline4a->[7]."  ","packetParser",0;
-		#warning @hexline4b->[0]." ".@hexline4b->[1]." ".@hexline4b->[2]." ".@hexline4b->[3]." ".@hexline4b->[4]." ".@hexline4b->[5]." ".@hexline4b->[6]." ".@hexline4b->[7]."\n","packetParser",0;
-		#warning @hexline5a->[0]." ".@hexline5a->[1]." ".@hexline5a->[2]." ".@hexline5a->[3]." ".@hexline5a->[4]." ".@hexline5a->[5]." ".@hexline5a->[6]." ".@hexline5a->[7]."  ","packetParser",0;
-		#warning @hexline5b->[0]." ".@hexline5b->[1]." ".@hexline5b->[2]." ".@hexline5b->[3]." ".@hexline5b->[4]." ".@hexline5b->[5]." ".@hexline5b->[6]."\n","packetParser",0;
+		warning $hexXX0." ".$hexXX1." ".$hexXX2."\n", "packetParser", 0;
+		warning $hexYY0." ".$hexYY1."\n", "packetParser", 0;
 		
 		$lastSwitch = "0069";
 		$msg = "";
-		
-		$msg.=chr(hex(@hexline1a->[0])); $msg.=chr(hex(@hexline1a->[1])); $msg.=chr(hex(@hexline1a->[2])); $msg.=chr(hex(@hexline1a->[3])); $msg.=chr(hex(@hexline1a->[4])); $msg.=chr(hex(@hexline1a->[5])); $msg.=chr(hex(@hexline1a->[6])); $msg.=chr(hex(@hexline1a->[7]));
-		$msg.=chr(hex(@hexline1b->[0])); $msg.=chr(hex(@hexline1b->[1])); $msg.=chr(hex(@hexline1b->[2])); $msg.=chr(hex(@hexline1b->[3])); $msg.=chr(hex(@hexline1b->[4])); $msg.=chr(hex(@hexline1b->[5])); $msg.=chr(hex(@hexline1b->[6])); $msg.=chr(hex(@hexline1b->[7]));
-		$msg.=chr(hex(@hexline2a->[0])); $msg.=chr(hex(@hexline2a->[1])); $msg.=chr(hex(@hexline2a->[2])); $msg.=chr(hex(@hexline2a->[3])); $msg.=chr(hex(@hexline2a->[4])); $msg.=chr(hex(@hexline2a->[5])); $msg.=chr(hex(@hexline2a->[6])); $msg.=chr(hex(@hexline2a->[7]));
-		$msg.=chr(hex(@hexline2b->[0])); $msg.=chr(hex(@hexline2b->[1])); $msg.=chr(hex(@hexline2b->[2])); $msg.=chr(hex(@hexline2b->[3])); $msg.=chr(hex(@hexline2b->[4])); $msg.=chr(hex(@hexline2b->[5])); $msg.=chr(hex(@hexline2b->[6])); $msg.=chr(hex(@hexline2b->[7]));
-		$msg.=chr(hex(@hexline3a->[0])); $msg.=chr(hex(@hexline3a->[1])); $msg.=chr(hex(@hexline3a->[2])); $msg.=chr(hex(@hexline3a->[3])); $msg.=chr(hex(@hexline3a->[4])); $msg.=chr(hex(@hexline3a->[5])); $msg.=chr(hex(@hexline3a->[6])); $msg.=chr(hex(@hexline3a->[7]));
-		$msg.=chr(hex(@hexline3b->[0])); $msg.=chr(hex(@hexline3b->[1])); $msg.=chr(hex(@hexline3b->[2])); $msg.=chr(hex(@hexline3b->[3])); $msg.=chr(hex(@hexline3b->[4])); $msg.=chr(hex(@hexline3b->[5])); $msg.=chr(hex(@hexline3b->[6])); $msg.=chr(hex(@hexline3b->[7]));
-		$msg.=chr(hex(@hexline4a->[0])); $msg.=chr(hex(@hexline4a->[1])); $msg.=chr(hex(@hexline4a->[2])); $msg.=chr(hex(@hexline4a->[3])); $msg.=chr(hex(@hexline4a->[4])); $msg.=chr(hex(@hexline4a->[5])); $msg.=chr(hex(@hexline4a->[6])); $msg.=chr(hex(@hexline4a->[7]));
-		$msg.=chr(hex(@hexline4b->[0])); $msg.=chr(hex(@hexline4b->[1])); $msg.=chr(hex(@hexline4b->[2])); $msg.=chr(hex(@hexline4b->[3])); $msg.=chr(hex(@hexline4b->[4])); $msg.=chr(hex(@hexline4b->[5])); $msg.=chr(hex(@hexline4b->[6])); $msg.=chr(hex(@hexline4b->[7]));
-		$msg.=chr(hex(@hexline5a->[0])); $msg.=chr(hex(@hexline5a->[1])); $msg.=chr(hex(@hexline5a->[2])); $msg.=chr(hex(@hexline5a->[3])); $msg.=chr(hex(@hexline5a->[4])); $msg.=chr(hex(@hexline5a->[5])); $msg.=chr(hex(@hexline5a->[6])); $msg.=chr(hex(@hexline5a->[7]));
-		$msg.=chr(hex(@hexline5b->[0])); $msg.=chr(hex(@hexline5b->[1])); $msg.=chr(hex(@hexline5b->[2])); $msg.=chr(hex(@hexline5b->[3])); $msg.=chr(hex(@hexline5b->[4])); $msg.=chr(hex(@hexline5b->[5])); $msg.=chr(hex(@hexline5b->[6]));
+		$msg .= chr(hex("69"));$msg .= chr(hex("00"));$msg .= chr(hex("4F"));$msg .= chr(hex("00"));
+		$msg .= chr(hex($hexYY0));
+		$msg .= chr(hex($hexYY1));
+		$msg .= chr(hex("00"));$msg .= chr(hex("00"));
+		$msg .= chr(hex($hexXX0));
+		$msg .= chr(hex($hexXX1));
+		$msg .= chr(hex($hexXX2));
+		$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));
+		$msg .= chr(hex("0D"));$msg .= chr(hex("C2"));$msg .= chr(hex("06"));$msg .= chr(hex("10"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));
+		$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));
+		$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));
+		$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("01"));$msg .= chr(hex("CA"));
+		$msg .= chr(hex("5D"));$msg .= chr(hex("19"));$msg .= chr(hex("46"));$msg .= chr(hex("70"));$msg .= chr(hex("17"));$msg .= chr(hex("43"));$msg .= chr(hex("48"));$msg .= chr(hex("41"));
+		$msg .= chr(hex("4F"));$msg .= chr(hex("53"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));
+		$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));
+		$msg .= chr(hex("00"));$msg .= chr(hex("A0"));$msg .= chr(hex("4C"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));$msg .= chr(hex("00"));
 	}
-	
-	#Log::warning (Data::Dumper::Dumper($self->{packet_list}{"A9A7"})."\n");
-	#Log::warning (Data::Dumper::Dumper($self->{packet_list}{$lastSwitch})."\n");
 	
 	my $handler = $self->{packet_list}{$lastSwitch};
 	
