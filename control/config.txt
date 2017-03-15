@@ -311,7 +311,7 @@ logPartyChat 1
 logGuildChat 1
 logSystemChat 1
 logEmoticons
-logConsole 0
+logConsole 1
 logAppendUsername 1
 logAppendServer 0
 monsterLog 0
