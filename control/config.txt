@@ -657,7 +657,7 @@ equipAuto {
 	manualAI 0
 }
 
-useSelf_item Sweet Potato, Lemon, Royal Jelly, White Herb {
+useSelf_item Sweet Potato, Lemon, Royal Jelly, White Herb, Carrot {
 	hp < 75 %
 }
 
