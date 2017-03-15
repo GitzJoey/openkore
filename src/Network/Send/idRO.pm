@@ -34,7 +34,7 @@ sub new {
 	}
 
 	my %handlers = qw(
-		send_equip 00A9
+		send_equip 0998
 		storage_password 023B
 		sync 0360
 		character_move 035F
