@@ -21,15 +21,15 @@
 # Andre Card	200,000		5
 # Coconut	1,000..2,000	2
 Minta Diskon? WM!
-Empty Bottle		300			150
-Poring Card			35,000		1
+Empty Bottle		150			550
+Poring Card			25,000		1
 Fabre Card			225,000		3
 Lunatic Card		400,000		1
-Elunium				3,500		5
+Elunium				2,500		5
 Rough Elunium		1,000		5
-Steel				7500		5
+Steel				6500		5
 Trunk				500			50
 Chivalry Emblem		10,000		2
-Detrimindexta		50,000		1
+Detrimindexta		25,000		1
 Iron				5,000		5
 Oridecon			9,500		10
