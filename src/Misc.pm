@@ -812,8 +812,9 @@ sub itemLog {
 
 sub chatLog {
 	my $type = shift;
-	my $message = shift;
-	if (uc($type) != 'S') {
+	my $message = shift;	
+	
+	if (uc($type) ne "S") {
 		open CHAT, ">>:utf8", $Settings::chat_log_file;
 		print CHAT "[".getFormattedDate(int(time))."][".uc($type)."] $message";
 		close CHAT;
