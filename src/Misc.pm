@@ -814,10 +814,20 @@ sub chatLog {
 	my $type = shift;
 	my $message = shift;	
 	
-	if (uc($type) ne "S") {
+	my $prnt = "true";
+	
+	if (uc($type) eq "S") {
+		$prnt = "false"
+	}
+
+	if (index($message, "#32008") != -1) {
+		$prnt = "false"
+	}
+	
+	if ($prnt eq "true") {
 		open CHAT, ">>:utf8", $Settings::chat_log_file;
 		print CHAT "[".getFormattedDate(int(time))."][".uc($type)."] $message";
-		close CHAT;
+		close CHAT;	
 	}
 }
 
