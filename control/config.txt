@@ -237,7 +237,8 @@ statsAddAuto_dontUseBonus 0
 statsAdd_over_99 0
 
 skillsAddAuto 1
-skillsAddAuto_list NV_BASIC 9
+skillsAddAuto_list NV_BASIC 9, SM_SWORD 10, SM_TWOHAND 10, SM_RECOVERY 10, MC_IDENTIFY 1, MC_INCCARRY 5, MC_DISCOUNT 5, MC_PUSHCART 3, MC_VENDING 5 
+
 
 tankMode 0
 tankModeTarget
