@@ -25,6 +25,7 @@ Empty Bottle		150			550
 Poring Card			25,000		1
 Fabre Card			225,000		3
 Lunatic Card		400,000		1
+Rocker Card			400,000		1
 Elunium				2,500		5
 Rough Elunium		1,000		5
 Steel				6500		5
