@@ -184,7 +184,7 @@ cartMaxWeight 7900
 itemsTakeAuto_new 0
 itemsTakeGreed 0
 
-lockMap moc_fild01
+lockMap prt_fild07
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -708,7 +708,7 @@ sellAuto 1
 #Izlude
 #sellAuto_npc izlude_in 60 127
 #Payon
-#sellAuto_npc payon_in02 87 34
+#sellAuto_npc payon 79 124
 #Alberta
 #sellAuto_npc alberta_in 175 97
 #prontera
