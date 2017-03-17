@@ -45,3 +45,5 @@ Green Lace				5,000		2
 Wig						5,000		1
 Wind of Verdure			9,000		1
 Dead Branch				45,000		5
+Hinalle					2,000		5
+Star Dust				3,000		3
