@@ -5,8 +5,8 @@
 
 master Indonesia - idRO: CHAOS
 server 0
-username 
-password 
+#username 
+#password 
 loginPinCode
 char 0
 
@@ -712,7 +712,7 @@ sellAuto 1
 #Alberta
 #sellAuto_npc alberta_in 175 97
 #prontera
-sellAuto_npc prontera 73 134
+#sellAuto_npc prontera 73 134
 sellAuto_standpoint
 sellAuto_distance 5
 sellAuto_npc_steps s e
