@@ -43,6 +43,12 @@ all 0 1 0
 # Sell This !
 Green Herb 0 0 1
 Arrow 0 0 1
+Novice Knife 0 0 1
+Novice Cutter 0 0 1
+Novice Egg Cap 0 0 1
+Novice Hood 0 0 1
+Novice Plate 0 0 1
+Novice Boots 0 0 1
 
 ##### HEAL/SUPPORT ITEMS #####
 # Adjust these to your needs
