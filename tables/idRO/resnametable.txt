@@ -1420,3 +1420,6 @@ ecl_tdun03.gnd#ecl_tdun03.gnd#
 ecl_tdun03.gat#ecl_tdun03.gat#
 ecl_tdun03.rsw#ecl_tdun03.rsw#
 유저인터페이스\map\ecl_tdun03.bmp#유저인터페이스\map\ecl_tdun03.bmp#
+
+payon.gat#old_payon.gat#
+morocc.gat#morocc_mem.gat#
