@@ -50,7 +50,7 @@ Novice Hood 0 0 1
 Novice Plate 0 0 1
 Novice Boots 0 0 1
 Novice Guard 0 0 1
-Novice Adventurer's Suit[1] 0 0 1
+Novice Adventurer's Suit [1] 0 0 1
 
 ##### HEAL/SUPPORT ITEMS #####
 # Adjust these to your needs
@@ -71,8 +71,8 @@ Yellow potion 25 1 0
 ##### ARROWS #####
 # You may want to modify these if you're an archer/hunter
 
-Arrow 3000 1 0
-
+#Arrow 3000 1 0
+Arrow 0 0 1
 
 
 #########################
