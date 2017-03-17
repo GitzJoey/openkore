@@ -5,8 +5,8 @@
 
 master Indonesia - idRO: CHAOS
 server 0
-#username 
-#password 
+username 
+password 
 loginPinCode
 char 0
 
