@@ -701,6 +701,17 @@ buyAuto {
 	disabled 0
 }
 
+#prontera
+buyAuto Fly Wing {
+	npc prt_in 126 76
+	standpoint
+	distance 5
+	price
+	minAmount 1
+	maxAmount 10
+	disabled 1
+}
+
 sellAuto 1
 #Geffen
 #sellAuto_npc geffen_in 22 171
