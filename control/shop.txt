@@ -29,8 +29,10 @@ Lunatic Card			150,000		1
 Spore Card				200,000		1
 Rocker Card				300,000		1
 Female Thiefbug Card	700,000		1
+PoPoring Card			50,000		1
 Willow Card				600,000		1
 Poison Spore Card		700,000		1
+Javelin [4]				35,000		1
 Elunium					2,000		5
 Rough Elunium			1,000		5
 Iron Ore				150			50
