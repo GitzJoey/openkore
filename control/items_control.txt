@@ -93,9 +93,9 @@ Chain Mail 0 0 1
 Circlet 0 0 1
 Coat 0 0 1
 Coat [1] 0 0 1
-Cotton Shirt 0 0 1
-Cotton Shirt [1] 0 0 1
-#Crystal Pumps 0 0 1
+Cotton Shirts 0 0 1
+Cotton Shirts [1] 0 0 1
+Crystal Pumps 0 0 1
 Diamond Ring 0 0 1
 Diver Goggles 0 0 1
 Eye Patch 0 0 1
@@ -246,7 +246,7 @@ Lute [2] 0 0 1
 Lute [3] 0 0 1
 Mace 0 0 1
 Mace [3] 0 0 1
-#Mace [4] 0 0 1
+Mace [4] 0 0 1
 Main Gauche 0 0 1
 Main Gauche [3] 0 0 1
 Mandolin [2] 0 0 1
@@ -271,9 +271,9 @@ Repeating Crossbow [1] 0 0 1
 Ring Pommel Saber [2] 0 0 1
 Rod 0 0 1
 Rod [3] 0 0 1
-#Rod [4] 0 0 1
+Rod [4] 0 0 1
 Rope [3] 0 0 1
-#Rope [4] 0 0 1
+Rope [4] 0 0 1
 Saber [2] 0 0 1
 Scimiter [2] 0 0 1
 Scimiter [3] 0 0 1
@@ -411,7 +411,7 @@ Fluff 0 0 1
 Fragment 0 0 1
 Frill 0 0 1
 Frozen Rose 0 0 1
-#Garlet 0 0 1
+Garlet 0 0 1
 Gill 0 0 1
 Glass Bead 0 0 1
 Glitter Shell 0 0 1
@@ -571,7 +571,7 @@ Yellow Plate 0 0 1
 Young Twig 0 0 1
 Yoyo Doll 0 0 1
 Yoyo Tail 0 0 1
-#Zargon 0 0 1
+Zargon 0 0 1
 Zenorc's Fang 0 0 1
 
 ##### UNSTORAGEABLE ITEMS #####

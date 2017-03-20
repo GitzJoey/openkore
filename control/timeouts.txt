@@ -7,10 +7,10 @@
 master 12
 gamelogin 12
 charlogin 12
-maplogin 24
+maplogin 48
 play 40
 # When disconnected, wait x seconds before reconnecting again
-reconnect 3
+reconnect 1
 
 # Wait x seconds for a poseidon reply before disconnecting
 # Ignore this if you don't use Poseidon Server
