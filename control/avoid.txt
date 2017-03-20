@@ -57,3 +57,4 @@ Hoggun		1 0 1
 Volstagg	1 0 1
 Frandal		1 0 1
 Gondsko		1 0 1
+Jung-Yeol	1 0 1
