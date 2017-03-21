@@ -11,3 +11,8 @@
 # Example (remove the comment character to activate them):
 #Hydra
 #Obeaune
+Pupa
+Creamy
+Roda Frog
+Smokie
+Kobold
