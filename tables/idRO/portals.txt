@@ -975,7 +975,7 @@ moc_fild12 118 30 moc_fild18 158 382
 moc_fild12 159 381 morocc 160 17
 moc_fild12 289 168 moc_fild11 26 161
 moc_fild13 29 171 moc_fild08 383 211
-moc_fild13 146 368 moc_fild02 71 18
+#moc_fild13 146 368 moc_fild02 71 18
 moc_fild13 298 370 moc_fild02 228 29
 moc_fild13 308 49 moc_fild03 17 37
 moc_fild14 16 278 moc_fild15 367 276

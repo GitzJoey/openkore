@@ -53,6 +53,7 @@ Novice Guard 0 0 1
 Novice Adventurer's Suit [1] 0 0 1
 Hat [1] 0 0 1
 Adventurer's Suit [1] 0 0 1
+Green Lace 0 0 1
 
 ##### HEAL/SUPPORT ITEMS #####
 # Adjust these to your needs
