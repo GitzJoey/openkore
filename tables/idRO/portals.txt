@@ -925,11 +925,11 @@ moc_fild01 239 382 prt_fild08 233 16
 moc_fild01 321 16 moc_fild02 67 342
 moc_fild01 379 162 pay_fild04 17 165
 moc_fild02 67 342 moc_fild01 321 16
-moc_fild02 71 18 moc_fild13 146 368
+#moc_fild02 71 18 moc_fild13 146 368
 moc_fild02 228 29 moc_fild13 298 370
 moc_fild02 332 19 moc_fild03 70 341
 moc_fild02 350 339 pay_fild04 194 17
-moc_fild02 378 272 pay_gld 16 276
+#moc_fild02 378 272 pay_gld 16 276
 moc_fild03 17 37 moc_fild13 308 49
 moc_fild03 70 341 moc_fild02 332 19
 moc_fild03 179 16 pay_fild11 38 330
@@ -1107,7 +1107,7 @@ orcsdun02 180 15 in_orcs01 108 114
 payon 189 69 pay_fild08 17 75
 payon 175 189 pay_arche 81 17
 payon 90 25 pay_fild01 333 356
-payon 16 143 pay_gld 370 149
+#payon 16 143 pay_gld 370 149
 payon 141 85 payon_in01 14 51
 payon 151 127 payon_in01 56 53
 payon 136 158 payon_in01 20 129
