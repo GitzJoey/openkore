@@ -54,6 +54,8 @@ Novice Adventurer's Suit [1] 0 0 1
 Hat [1] 0 0 1
 Adventurer's Suit [1] 0 0 1
 Green Lace 0 0 1
+Egg Shell 0 0 1
+Red Herb 50 0 1
 
 ##### HEAL/SUPPORT ITEMS #####
 # Adjust these to your needs
@@ -508,7 +510,7 @@ Rouge 0 0 1
 Round Shell 0 0 1
 Sand Clump 0 0 1
 Scale Shell 0 0 1
-#Scell 0 0 1
+Scell 0 0 1
 Scorpion Claw 0 0 1
 Scorpion Nipper 0 0 1
 Scorpion Tail 0 0 1
