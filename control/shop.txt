@@ -20,33 +20,34 @@
 # Jellopy		3
 # Andre Card	200,000		5
 # Coconut	1,000..2,000	2
-Minta Diskon? WM!
+Harga Pensiun
 Empty Bottle			150			1000
-Poring Card				35,000		1
-Fabre Card				225,000		3
+Poring Card				25,000		1
+Fabre Card				150,000		3
 Chonchon Card			75,000		1
-Lunatic Card			150,000		1
-Spore Card				200,000		1
-Rocker Card				75,000		1
+Lunatic Card			100,000		1
+Spore Card				150,000		1
+Rocker Card				35,000		1
 Female Thiefbug Card	700,000		1
 PoPoring Card			50,000		1
 Willow Card				600,000		1
-Drops Egg				100,000		1
+Drops Card				200,000		1
 Poison Spore Card		700,000		1
-Javelin [4]				35,000		1
-Elunium					2,000		5
-Rough Elunium			1,000		5
+Drops Egg				80,000		1
 Iron Ore				100			200
+Iron					500			100
+Trunk					150			100
+Elunium					2,000		50
+Oridecon				5,500		50
+Rough Elunium			1,000		50
 Steel					6500		5
-Trunk					250			50
+Dead Branch				10,000		100
+Wind of Verdure			1,000		50
+Hinalle					1,000		50
+Star Dust				1,000		50
+Javelin [4]				35,000		1
 Chivalry Emblem			10,000		2
 Detrimindexta			25,000		1
-Iron					750			5
-Oridecon				9,500		10
 Emvertracon				750			5
 Green Lace				5,000		5
 Wig						5,000		1
-Wind of Verdure			9,000		1
-Dead Branch				15,000		5
-Hinalle					2,000		5
-Star Dust				3,000		3
