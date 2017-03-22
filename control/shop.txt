@@ -36,7 +36,7 @@ Poison Spore Card		700,000		1
 Drops Egg				80,000		1
 Iron Ore				100			200
 Iron					500			100
-Trunk					150			100
+Trunk					100			100
 Elunium					2,000		50
 Oridecon				5,500		50
 Rough Elunium			1,000		50
