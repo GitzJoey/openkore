@@ -721,6 +721,8 @@ sellAuto 1
 #sellAuto_npc izlude_in 60 127
 #Payon
 #sellAuto_npc payon 79 124
+#Payon Archer
+#sellAuto_npc payon_in02 87 34
 #Alberta
 #sellAuto_npc alberta_in 175 97
 #prontera
