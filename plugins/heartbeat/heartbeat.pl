@@ -36,12 +36,32 @@ sub onRequest () {
 	print $sock $data;
 }
 
-sub onReceive () {
+sub onReceive ($localPort) {
+	message "[Heartbeat Receive] \n", "system"; 
+
+	$| = 1;
+ 
+	my ($socket,$data);
+ 
+	#  Create a new UDP socket
+	$socket = new IO::Socket::INET (
+		LocalPort 	=> $localPort,
+		Proto       => 'udp'
+	) or die "ERROR creating socket : $!n";
+ 
+	my ($datagram,$flags);
 	
+	while (1) {
+		$socket->recv($datagram,42,$flags);
+		print "Received datagram from ", $socket->peerhost, ", flags ", $flags || "none", ": $datagramn";
+	}
+ 
+	$socket->close();
 }
 
 sub onSend() {
-
+	message "[Heartbeat Send] \n", "system"; 
+	
 }
 
 sub process_packet {
