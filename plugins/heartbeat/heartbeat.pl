@@ -1,15 +1,16 @@
 package heartbeat;
 
 use strict;
+use warnings;
 use Plugins;
-use IO::Socket::INET;
+use IO::Socket;
+use IO::Select;
 use Log qw(message error warning);
 
 Plugins::register('heartbeat', 'idRO heartbeat', \&Unload, \&Unload);
 
 my $hooks = Plugins::addHooks(
-	['request_heartbeat',		\&onRequest, undef],
-	['receive_heartbeat',		\&onReceive, undef],
+	['pingpong_heartbeat',		\&onPingPong, undef],
 	['send_heartbeat',			\&onSend, undef]
 );
 
@@ -18,7 +19,7 @@ sub Unload {
 	Plugins::delHooks($hooks);
 }
 
-sub onRequest () {
+sub onPingPong () {
 	message "[Heartbeat Request] \n", "system"; 
 
 	my $dest_serverIp = '202.93.25.76';
@@ -26,58 +27,35 @@ sub onRequest () {
 	
 	my $local_port = 52000 + int(rand(63999 - 52000));
 	
-	my $sock = new IO::Socket::INET(
+	my $sock = IO::Socket::INET->new(
 		PeerAddr => $dest_serverIp,
-        PeerPort => 3671,
+        PeerPort => $dest_port,
 		LocalPort => $local_port,
         Proto => 'udp', 
 		Timeout => 1) or die('Error opening socket.');
-	my $data = "hello";
-	print $sock $data;
+	
+	my $data = "hello";	
+	
+	while (<>){
+		$sock->send();		
+		sleep .2; # Wait for response...
+		
+		message "[Heartbeat Receive] \n", "system";
+		print   "RCV:" . read_socket($send_socket, $datagram) . "\n";
+   }
+   exit;
 }
 
-sub onReceive ($localPort) {
-	message "[Heartbeat Receive] \n", "system"; 
+sub read_socket{
+    my $h = shift;  # Socket Handle
 
-	$| = 1;
- 
-	my ($socket,$data);
- 
-	#  Create a new UDP socket
-	$socket = new IO::Socket::INET (
-		LocalPort 	=> $localPort,
-		Proto       => 'udp'
-	) or die "ERROR creating socket : $!n";
- 
-	my ($datagram,$flags);
+    my ($datagram,$flags);
+
+    my $Sender_Info = $h->recv($datagram, $MAX_TO_READ, $flags) or return 0;
 	
-	while (1) {
-		$socket->recv($datagram,42,$flags);
-		print "Received datagram from ", $socket->peerhost, ", flags ", $flags || "none", ": $datagramn";
-	}
- 
-	$socket->close();
-}
-
-sub onSend() {
-	message "[Heartbeat Send] \n", "system"; 
+    my ($Sender_port, $Sender_iaddr_binary) = sockaddr_in($Sender_Info);
 	
-}
-
-sub process_packet {
-	my($user_data, $header, $packet) = @_;
-	my $len = length $packet;
+    my $Sender_addr = inet_ntoa($Sender_iaddr_binary);
 	
-	my $i=0;
-
-	do {
-		my $lg = substr $packet, $i, 16;
-		printf "%.8X : ", $i;
-		$i+=16;
-		print unpack ('H2'x16, $lg), '  'x(16-length $lg);
-		$lg =~ s/[x00-x1FxFF]/./g;
-		print " $lgn";
-	} until $i>=$len;
-  
-	print "n";
+    return $Sender_addr, $Sender_port, $datagram;
 }
