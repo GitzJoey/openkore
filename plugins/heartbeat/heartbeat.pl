@@ -10,8 +10,7 @@ use Log qw(message error warning);
 Plugins::register('heartbeat', 'idRO heartbeat', \&Unload, \&Unload);
 
 my $hooks = Plugins::addHooks(
-	['pingpong_heartbeat',		\&onPingPong, undef],
-	['send_heartbeat',			\&onSend, undef]
+	['idROheartbeat',		\&onLoad, undef]
 );
 
 # onUnload
@@ -19,30 +18,36 @@ sub Unload {
 	Plugins::delHooks($hooks);
 }
 
-sub onPingPong () {
-	message "[Heartbeat Request] \n", "system"; 
-
-	my $dest_serverIp = '202.93.25.76';
-	my $dest_port = 17000;
-	
-	my $local_port = 52000 + int(rand(63999 - 52000));
-	
-	my $sock = IO::Socket::INET->new(
-		PeerAddr => $dest_serverIp,
-        PeerPort => $dest_port,
-		LocalPort => $local_port,
-        Proto => 'udp', 
-		Timeout => 1) or die('Error opening socket.');
-	
-	my $data = "hello";	
-	
-	while (<>){
-		$sock->send();		
-		sleep .2; # Wait for response...
+sub onLoad ($aDestIp, $aDestPort) {
+	#If change map, do new ping-pong request, else just send the ping
+	if ($aDestIp ne $dest_serverIp) {
+		my $dest_serverIp = '202.93.25.76';
+		my $dest_port = 17000;
 		
-		message "[Heartbeat Receive] \n", "system";
-		print   "RCV:" . read_socket($send_socket, $datagram) . "\n";
-   }
+		my $local_port = 52000 + int(rand(63999 - 52000));
+		
+		my $sock = IO::Socket::INET->new(
+			PeerAddr => $dest_serverIp,
+			PeerPort => $dest_port,
+			LocalPort => $local_port,
+			Proto => 'udp', 
+			Timeout => 1) or die('Error opening socket.');
+		
+		my $data = "hello";	
+		
+		while (<>){
+			$sock->send();		
+			sleep .2; # Wait for response...
+			
+			message "[Heartbeat Receive] \n", "system";
+			print   "RCV:" . read_socket($send_socket, $datagram) . "\n";
+			
+			#do data process here
+			#end data process
+	   }		
+	} else {
+	
+	}
    exit;
 }
 
